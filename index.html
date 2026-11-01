@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mélony Y. Qin — Founder, technologist, author</title>
+<meta name="description" content="Mélony Y. Qin — founder of GoCerebro, iMelonArt Ventures and CVisiona; Kubernetes contributor; author of five technical books.">
+<link rel="canonical" href="https://melonyqin.com/">
+<meta property="og:title" content="Mélony Y. Qin">
+<meta property="og:description" content="Founder, technologist and author. Building GoCerebro, a trust layer between people and AI.">
+<meta property="og:url" content="https://melonyqin.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mélony Y. Qin">
+<meta property="og:locale" content="en_US">
+<link rel="sitemap" type="application/xml" href="/sitemap-main.xml">
+<meta property="og:image" content="https://melonyqin.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mélony Y. Qin — Founder, technologist and author">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/mq-icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mélony Y. Qin", "url": "https://melonyqin.com/", "jobTitle": "Founder, technologist and author", "worksFor": {"@type": "Organization", "name": "GoCerebro", "url": "https://gocerebro.ai"}, "address": {"@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR"}, "sameAs": ["https://github.com/cloudmelon", "https://mastodon.social/@melonyqin", "https://www.linkedin.com/in/melony-qin/", "https://x.com/MelonyQ", "https://bsky.app/profile/cloudmelon.bsky.social", "https://melonyqin.substack.com/", "https://www.amazon.com/stores/Melony-QIN/author/B07H5L7M9M"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#1A56DB; --accent-dark:#0E3FA8; --accent-soft:#EEF3FD;
+  --ink:#111318; --body:#3A414D; --muted:#5B6470; --line:#E6E8EC;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-dark);text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.eyebrow{margin:0;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+h2{margin:0;font-size:30px;line-height:1.2;font-weight:700;letter-spacing:-.02em}
+section.block{padding:72px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;margin-bottom:32px}
+.sec-head .num{font-family:var(--mono);font-size:14px;color:var(--accent)}
+.card{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid var(--line);border-radius:12px;color:var(--ink);background:#fff;min-width:0}
+a.card:hover{border-color:var(--accent);text-decoration:none}
+.card .t{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.card .d{font-size:15px;line-height:1.5;color:var(--muted)}
+.card .go{font-size:14px;color:var(--accent);margin-top:auto;padding-top:6px}
+.g2,.g3,.g4,.g5{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15px}
+.btn:hover{text-decoration:none}
+
+/* Header */
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:32px}
+.top nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
+.top nav a{color:var(--muted)}
+
+/* The system tree */
+.system{background-color:#fff;background-image:radial-gradient(#D9E2F1 1px,transparent 1px);background-size:22px 22px;border:1px solid var(--line);border-radius:20px;padding:40px 28px 28px}
+.root{display:flex;justify-content:center}
+.root span{padding:12px 26px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:17px}
+.stem{width:2px;height:28px;background:var(--accent);margin:0 auto}
+.branches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 18px}
+.branch{display:flex;flex-direction:column}
+.conn{display:flex;height:28px}
+.conn i{flex:1}
+.conn b{width:2px;background:var(--accent)}
+.branch:not(:first-child) .conn i:first-child{border-top:2px solid var(--accent);margin-left:-9px}
+.branch:not(:last-child) .conn i:last-child{border-top:2px solid var(--accent);margin-right:-9px}
+.node{flex:1;display:flex;flex-direction:column;gap:14px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.node ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.node li a{display:block;color:var(--ink);font-weight:600;font-size:15px;line-height:1.4}
+.node li a:hover{color:var(--accent)}
+.node li small{display:block;font-size:13px;font-weight:400;color:var(--muted);line-height:1.4}
+.node .sub{padding-left:12px;border-left:1px dashed #B7C7E6;display:flex;flex-direction:column;gap:10px}
+.node .more{margin-top:auto;font-family:var(--mono);font-size:12px}
+
+/* Before / Now */
+.bn{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);align-items:stretch}
+.bn .col{display:flex;flex-direction:column;gap:0}
+.bn .col h3{margin:0 0 12px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.bn .row{padding:16px 0;border-top:1px solid var(--line);font-size:16px;font-weight:600}
+.bn .row:last-child{border-bottom:1px solid var(--line)}
+.bn .row small{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+.bn .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:28px}
+.bn .now{background:var(--accent-soft);border-radius:16px;padding:24px}
+.bn .now .row{border-color:#D3DEF7}
+
+/* Lists */
+.chan{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:0 20px;border:1px solid var(--line);border-radius:10px;color:var(--ink)}
+.chan:hover{border-color:var(--accent);text-decoration:none}
+.chan b{font-weight:600;font-size:16px;display:block}
+.chan small{font-size:14px;color:var(--muted)}
+.book{display:flex;flex-direction:column;gap:10px;color:var(--ink);min-width:0}
+.book:hover{text-decoration:none;color:var(--accent)}
+.book picture{display:block}
+.book img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+.book .t{font-size:16px;font-weight:600;line-height:1.35}
+.book-item{display:flex;flex-direction:column;gap:6px;min-width:0}
+.buy{font-size:14px;color:var(--muted)}
+.disclosure{margin:20px 0 0;font-size:13px;color:var(--muted)}
+.tag{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-dark);font-size:14px;font-weight:500}
+
+@media (max-width:900px){
+  .branches{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .conn,.stem{display:none}
+  .root{margin-bottom:18px}
+  .g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bn{grid-template-columns:minmax(0,1fr);gap:16px}
+  .bn .arrow{transform:rotate(90deg);height:32px}
+}
+@media (max-width:560px){
+  .branches,.g2,.g3{grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:40px !important}
+  .system{padding:28px 16px 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a href="#top" style="font-weight:600;font-size:16px;color:var(--ink)">Mélony Y. Qin</a>
+  <nav aria-label="Main">
+    <a href="#build">Build</a>
+    <a href="#write">Write</a>
+    <a href="#broadcast">Broadcast</a>
+    <a href="#contribute">Contribute</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="wrap hero" style="padding-top:104px;padding-bottom:64px;display:flex;flex-direction:column;gap:24px">
+    <p class="eyebrow">Founder · Technologist · Author</p>
+    <h1 style="margin:0;font-size:60px;line-height:1.05;font-weight:700;letter-spacing:-.035em;max-width:900px">Hi, I&#39;m Mélony.<br><span style="color:var(--accent)">One founder, one system</span> of companies, books and channels.</h1>
+    <p style="margin:0;font-size:21px;line-height:1.5;color:var(--body);max-width:680px">I&#39;ve been building for 10+ years: as a hands-on full-stack engineer and open-source contributor, and as a PM shipping cloud and data infrastructure. Today I&#39;m building GoCerebro, a trust layer between people and AI.</p>
+    <p style="margin:0;font-size:16px" class="muted">Based in Paris. Kubernetes contributor. Author of five technical books.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:8px">
+      <a class="btn" href="https://gocerebro.ai" style="background:var(--accent);color:#fff">See what I&#39;m building</a>
+      <a class="btn" href="#contact" style="border:1px solid #D5D9E0;color:var(--ink);font-weight:500">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- The system -->
+  <section class="wrap" aria-labelledby="sys-h" style="padding-bottom:72px">
+    <h2 id="sys-h" class="eyebrow" style="margin-bottom:16px">How it all connects</h2>
+    <div class="system">
+      <div class="root"><span>Mélony Qin</span></div>
+      <div class="stem"></div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="conn"><i></i><b></b><i></i></div>
+          <div class="node">
+            <p class="eyebrow">01 / Build</p>
+            <ul>
+              <li><a href="https://gocerebro.ai">GoCerebro, Inc.<small>Core engine and products</small></a></li>
+              <li><a href="https://imelonart.com">iMelonArt Ventures<small>The venture studio</small></a></li>
+            </ul>
+            <div class="sub">
+              <ul>
+                <li><a href="https://cvisiona.com">CVisiona<small>Complex idea, simple stories</small></a></li>
+                <li><a href="https://imelonart.com">Agent Studio<small>AI agents for content publishing</small></a></li>
+                <li><a href="https://imelonart.com">Influence dashboard<small>Audience across platforms, one view</small></a></li>
+                <li><a href="https://oneclickapply.net">OneClick Apply<small>One-click applications</small></a></li>
+              </ul>
+            </div>
+            <a class="more" href="#build">See companies ↓</a>
+          </div>
+        </div>
+
+        <div class="branch">
+          <div class="conn"><i></i><b></b><i></i></div>
+          <div class="node">
+            <p class="eyebrow">02 / Write</p>
+            <ul>
+              <li><a href="#write">The AI Builder&#39;s Field Guide<small>Book · Author</small></a></li>
+              <li><a href="#write">Azure Integration Guide for Business<small>Book · Co-author</small></a></li>
+              <li><a href="#write">CKA Exam Guide<small>Book · Author</small></a></li>
+              <li><a href="#write">The Kubernetes Workshop<small>Book · Co-author</small></a></li>
+              <li><a href="#write">Microsoft Azure Infrastructure<small>Book · Author</small></a></li>
+              <li><a href="https://melonyqin.substack.com/">AI Entrepreneurs Weekly<small>Newsletter</small></a></li>
+            </ul>
+            <a class="more" href="#write">See books and newsletter ↓</a>
+          </div>
+        </div>
+
+        <div class="branch">
+          <div class="conn"><i></i><b></b><i></i></div>
+          <div class="node">
+            <p class="eyebrow">03 / Broadcast</p>
+            <ul>
+              <li><a href="https://cvisiona.com">cvisiona.com<small>Cloud-native and AI insights</small></a></li>
+              <li><a href="https://www.youtube.com/c/CloudMelonVis">CloudMelon Vis<small>YouTube</small></a></li>
+              <li><a href="https://www.youtube.com/@CVisiona">CVisiona<small>YouTube</small></a></li>
+            </ul>
+            <a class="more" href="#broadcast">See channels ↓</a>
+          </div>
+        </div>
+
+        <div class="branch">
+          <div class="conn"><i></i><b></b><i></i></div>
+          <div class="node">
+            <p class="eyebrow">04 / Contribute</p>
+            <ul>
+              <li><a href="https://github.com/cloudmelon">Kubernetes<small>Release team · DevEx TAG Tech Lead</small></a></li>
+              <li><a href="https://github.com/cloudmelon">Helm, Istio, etcd, Docker<small>Contributor</small></a></li>
+              <li><a href="https://github.com/NVlabs/LITA">NVIDIA Research Projects<small>LITA · Contributor</small></a></li>
+              <li><a href="https://devblogs.microsoft.com/azure-sql/author/melqin/">Microsoft Azure<small>Microsoft Docs and blogs</small></a></li>
+            </ul>
+            <a class="more" href="#contribute">See open source ↓</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / Now -->
+  <section class="block" aria-labelledby="bn-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="bn-h">Before &amp; now</h2></div>
+      <div class="bn">
+        <div class="col" style="padding:24px 0">
+          <p class="eyebrow" style="color:var(--muted);margin-bottom:8px">Before</p>
+          <h3>At Microsoft</h3>
+          <div class="row">Founding PM, S3-based endpoint query and object storage backup/restore</div>
+          <div class="row">First .NET runtime sim-ship on Azure Functions, across Windows and Linux, VS Code and Visual Studio</div>
+          <div class="row">PM, SQL Server Big Data Clusters and Azure Arc-enabled SQL Server</div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="col now">
+          <p class="eyebrow" style="margin-bottom:8px">● Now</p>
+          <h3>Building in France</h3>
+          <div class="row"><a href="https://gocerebro.ai">GoCerebro</a> <small>Private beta</small></div>
+          <div class="row">Writing <a href="https://melonyqin.substack.com/">AI Entrepreneurs Weekly</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Build -->
+  <section id="build" class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">01</span><h2>Build</h2></div>
+      <div class="g3">
+        <a class="card" href="https://gocerebro.ai">
+          <span class="eyebrow">Founder &amp; CEO</span>
+          <span class="t">GoCerebro</span>
+          <span class="d">A trust layer between people and AI: checks AI output, flags deepfakes and scams.</span>
+          <span class="go">gocerebro.ai →</span>
+        </a>
+        <a class="card" href="https://imelonart.com">
+          <span class="eyebrow">Founder &amp; Managing Partner</span>
+          <span class="t">iMelonArt Ventures</span>
+          <span class="d">A venture studio that creates companies with AI agents and its own media channel.</span>
+          <span class="go">imelonart.com →</span>
+        </a>
+        <a class="card" href="https://cvisiona.com">
+          <span class="eyebrow">Founder</span>
+          <span class="t">CVisiona</span>
+          <span class="d">Next-gen tech media for builders. Complex idea, simple stories.</span>
+          <span class="go">cvisiona.com →</span>
+        </a>
+      </div>
+      <p class="eyebrow" style="margin:40px 0 16px">Recently: side projects, built with Claude Code</p>
+      <div class="g3">
+        <a class="card" href="https://oneclickapply.net">
+          <span class="t">One-click apply agent</span>
+          <span class="d">A Chrome extension that reads a CV (PDF or text) and uses an LLM to fill out any job application form in one click.</span>
+          <span class="go">Interactive demo →</span>
+        </a>
+        <a class="card" href="https://imelonart.com">
+          <span class="t">iMelonArt AI agent studio</span>
+          <span class="d">Multi-agent system that streamlines content publication workflows across my media brands.</span>
+          <span class="go">Interactive demos →</span>
+        </a>
+        <a class="card" href="https://imelonart.com">
+          <span class="t">Social Influence dashboard</span>
+          <span class="d">Pulls follower and subscriber counts from multiple social platforms and APIs across three brands into one view.</span>
+          <span class="go">Interactive demo →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Write -->
+  <section id="write" class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">02</span><h2>Write</h2><span class="muted" style="font-size:15px">Five technical books on AI agents, Kubernetes, AI infrastructure, GPU optimization and cloud-native systems</span></div>
+      <div class="g5">
+        <div class="book-item">
+        <a class="book" href="https://newsletter.cvisiona.com">
+          <picture><source type="image/webp" srcset="https://static.wixstatic.com/media/7594e9_d598cf41b7514479a189c3ec5b315ddf~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_webp/ai-builders-field-guide.webp"><img loading="lazy" src="https://static.wixstatic.com/media/7594e9_d598cf41b7514479a189c3ec5b315ddf~mv2.png/v1/fill/w_600,h_800,al_c/ai-builders-field-guide.png" width="600" height="800" alt="The AI Builder's Field Guide: From First Agent to Production on Kubernetes cover"></picture>
+          <span class="t">The AI Builder&#39;s Field Guide</span><span class="muted" style="font-size:14px">Author · CVisiona, 2026</span>
+        </a>
+        <span class="buy"><a href="https://newsletter.cvisiona.com">Get the guide</a></span>
+        </div>
+        <div class="book-item">
+        <a class="book" href="https://amzn.to/3RSHtHp" rel="sponsored">
+          <picture><source type="image/webp" srcset="https://static.wixstatic.com/media/7594e9_c3fee3a2a63b41d183c045a9419682df~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_webp/azure-integration.webp"><img loading="lazy" src="https://static.wixstatic.com/media/7594e9_c3fee3a2a63b41d183c045a9419682df~mv2.png/v1/fill/w_600,h_800,al_c/azure-integration.png" width="600" height="800" alt="Azure Integration Guide for Business cover"></picture>
+          <span class="t">Azure Integration Guide for Business</span><span class="muted" style="font-size:14px">Co-author · Packt, 2023</span>
+        </a>
+        <span class="buy"><a href="https://amzn.to/3RSHtHp" rel="sponsored">Paperback</a> · <a href="https://amzn.to/3PRJVvo" rel="sponsored">Kindle</a></span>
+        </div>
+        <div class="book-item">
+        <a class="book" href="https://amzn.to/448NJid" rel="sponsored">
+          <picture><source type="image/webp" srcset="https://static.wixstatic.com/media/7594e9_0281820f8eb94820b2d343c977158c77~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_webp/cka-guide.webp"><img loading="lazy" src="https://static.wixstatic.com/media/7594e9_0281820f8eb94820b2d343c977158c77~mv2.png/v1/fill/w_600,h_800,al_c/cka-guide.png" width="600" height="800" alt="Certified Kubernetes Administrator (CKA) Exam Guide cover"></picture>
+          <span class="t">Certified Kubernetes Administrator (CKA) Exam Guide</span><span class="muted" style="font-size:14px">Author · Packt, 2022</span><span class="muted" style="font-size:13px;line-height:1.4">Forewords by Brendan Burns, Alessandro Vozza and Mark Whitby</span>
+        </a>
+        <span class="buy"><a href="https://amzn.to/448NJid" rel="sponsored">Paperback</a> · <a href="https://amzn.to/3Vjzjrj" rel="sponsored">Kindle</a></span>
+        </div>
+        <div class="book-item">
+        <a class="book" href="https://amzn.to/41VEu3q" rel="sponsored">
+          <picture><source type="image/webp" srcset="https://static.wixstatic.com/media/7594e9_869d944536b14a778e29fa7e403cc916~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_webp/kubernetes-workshop.webp"><img loading="lazy" src="https://static.wixstatic.com/media/7594e9_869d944536b14a778e29fa7e403cc916~mv2.png/v1/fill/w_600,h_800,al_c/kubernetes-workshop.png" width="600" height="800" alt="The Kubernetes Workshop cover"></picture>
+          <span class="t">The Kubernetes Workshop</span><span class="muted" style="font-size:14px">Co-author · Packt, 2020</span>
+        </a>
+        <span class="buy"><a href="https://amzn.to/41VEu3q" rel="sponsored">Paperback</a> · <a href="https://amzn.to/3na7qpc" rel="sponsored">Kindle</a></span>
+        </div>
+        <div class="book-item">
+        <a class="book" href="https://www.amazon.com/stores/Melony-QIN/author/B07H5L7M9M">
+          <picture><source type="image/webp" srcset="https://static.wixstatic.com/media/7594e9_0bd0ebac6829483d9eedf97925fb0cd6~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_webp/azure-infrastructure.webp"><img loading="lazy" src="https://static.wixstatic.com/media/7594e9_0bd0ebac6829483d9eedf97925fb0cd6~mv2.png/v1/fill/w_600,h_800,al_c/azure-infrastructure.png" width="600" height="800" alt="Implementing Microsoft Azure Infrastructure Solutions cover"></picture>
+          <span class="t">Microsoft Azure Infrastructure</span><span class="muted" style="font-size:14px">Author · Packt, 2018</span>
+        </a>
+        <span class="buy"><a href="https://www.amazon.com/stores/Melony-QIN/author/B07H5L7M9M">On Amazon</a></span>
+        </div>
+      </div>
+      <p class="disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="eyebrow" style="margin:40px 0 16px">Newsletter</p>
+      <div class="g2">
+        <a class="chan" href="https://melonyqin.substack.com/"><span><b>AI Entrepreneurs Weekly</b><small>Newsletter on Substack</small></span><span style="color:var(--accent)">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Broadcast -->
+  <section id="broadcast" class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">03</span><h2>Broadcast</h2></div>
+      <div class="g2">
+        <a class="chan" href="https://cvisiona.com"><span><b>cvisiona.com</b><small>Regular insights on cloud-native and AI</small></span><span style="color:var(--accent)">→</span></a>
+        <a class="chan" href="https://www.youtube.com/c/CloudMelonVis"><span><b>CloudMelon Vis</b><small>YouTube — tech is fun, for builders</small></span><span style="color:var(--accent)">→</span></a>
+        <a class="chan" href="https://www.youtube.com/@CVisiona"><span><b>CVisiona</b><small>YouTube — next-gen tech media</small></span><span style="color:var(--accent)">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Contribute -->
+  <section id="contribute" class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">04</span><h2>Contribute</h2></div>
+      <div class="g2" style="gap:16px 40px">
+        <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)">
+          <span style="font-size:17px;font-weight:600">Kubernetes</span>
+          <span class="muted" style="font-size:15px">Contributor · Release team member · DevEx TAG Tech Lead · Occasional KubeCon committee member</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)">
+          <span style="font-size:17px;font-weight:600">Helm, Istio, etcd, Docker</span>
+          <span class="muted" style="font-size:15px">Contributor · <a href="https://github.com/cloudmelon">github.com/cloudmelon</a></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)">
+          <span style="font-size:17px;font-weight:600"><a href="https://github.com/NVlabs/LITA" style="color:var(--ink)">NVIDIA Research Projects</a></span>
+          <span class="muted" style="font-size:15px">Contributor · <a href="https://github.com/NVlabs/LITA">LITA</a> (NVlabs)</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)">
+          <span style="font-size:17px;font-weight:600"><a href="https://devblogs.microsoft.com/azure-sql/author/melqin/" style="color:var(--ink)">Microsoft Azure</a></span>
+          <span class="muted" style="font-size:15px">Microsoft Docs and blogs</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 40px">
+        <span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Istio</span><span class="tag">etcd</span><span class="tag">Docker</span><span class="tag">NVIDIA</span><span class="tag">Microsoft Azure</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="block">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+      <h2>Contact</h2>
+      <p style="margin:0;color:var(--body);max-width:560px">For speaking, press, sponsorships and partnerships, reach me through the <a href="https://cvisiona.com/partner-with-us">CVisiona Partner with us page</a>.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px">
+        <a href="https://www.linkedin.com/in/melony-qin/">LinkedIn</a>
+        <a href="https://github.com/cloudmelon">GitHub</a>
+        <a href="https://x.com/MelonyQ">X</a>
+        <a href="https://bsky.app/profile/cloudmelon.bsky.social">Bluesky</a>
+        <a href="https://mastodon.social/@melonyqin">Mastodon</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;font-size:14px;color:var(--muted)">
+  <span>© 2026 Mélony Y. Qin. All rights reserved.</span>
+  <span>Paris, France</span>
+</footer>
+
+</body>
+</html>
